@@ -8,11 +8,13 @@
     <h1>WELCOME TO YOUR VIRTUAL MIND MAP</h1>
     <h2 style="font-size: 35px;">Login: </h2>
     <div id="loginContainer">
-      <form>
+      <!--added get method and action to take to welcome Page, 
+        change to POST method when someone knows how to use that--> 
+      <form method="GET" action="welcomePage.html">
         <label>Username/Email Address: </label>
-        <input class="inputBox" id="userID" type="text" placeholder="Username/Email Address" required="required" autocomplete="off"><br><br>
+        <input class="inputBox" id="userID" type="text" name="user" placeholder="Username/Email Address" required="required" autocomplete="off"><br><br>
         <label>Password: </label>
-        <input class="inputBox" id="pswd" type="password" placeholder="Password" required="required"><br><br>
+        <input class="inputBox" id="pswd" type="password" name="pass" placeholder="Password" required="required"><br><br>
         <input class="btn" id="submitBtn" type="submit" value="Log In">
       </form>
     </div>

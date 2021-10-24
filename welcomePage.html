@@ -5,8 +5,28 @@
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="welcomePage.css">
     </head>
+<!--added getData script to take login info from link, displays it in an alert and inside one div
+    for testing purposes-->
+    <script>
+        function getData() {
+            var link = location.search;
+            const userArr = link.split("&");
+            
+            var splitArr = userArr[0].split("=");
+            const user = splitArr[1];
+            
+            var splitArr = userArr[1].split("=");
+            const pass = splitArr[1];
+            
+            window.alert(user + " " + pass);
+            document.getElementById("block1").innerHTML = user + pass;
+            }
 
-    <body>
+    </script>
+    <!--added onload to call getData-->
+    <body onload="getData()">
+
+        </div>
         <div id="topBar">
             <div id="username">User One
                 <div id="accType">Student Account</div>
