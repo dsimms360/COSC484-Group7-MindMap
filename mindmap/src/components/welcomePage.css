@@ -1,0 +1,122 @@
+html {
+    background-color: #525252;
+    margin-left: 1%;
+    
+    color: #FFFFFF;
+}
+
+#topBar {
+    width: 67%;
+    height:10%;
+    position: fixed;
+    top: 0%;
+    left:0%;
+    background-color: #393939;
+}
+
+a {
+    color:crimson;
+}
+
+a:hover {
+    color: cyan;
+}
+
+/*a:visited {
+    color: blue;
+}*/
+
+#pg1Button {
+    position: fixed;
+    width:10%;
+    height:6%;
+    left:26%;
+    top:1.5%;
+}
+
+#pg2Button {
+    position: fixed;
+    width:10%;
+    height:6%;
+    left:38%;
+    top:1.5%;
+}
+
+#pg3Button {
+    position: fixed;
+    width:10%;
+    height:6%;
+    left:50%;
+    top:1.5%;
+}
+
+#progress {
+    position: fixed;
+    top:15%;
+    left:5%;
+}
+
+#calendar {
+    background-color: #1a1a1a;
+    width: 33%;
+    height: 100%;
+    position:absolute;
+    top: 0%;
+    left:67%;
+    color: #FFFFFF;
+}
+
+#events {
+    background-color: 969495;
+    width: 21%;
+    height: 30%;
+    position: absolute;
+    top: 33%;
+}
+#eventsLabel {
+    position: relative;
+    top: -12%;    
+}
+
+#progressBar {
+    width:12%;
+    height:6%;
+    position: fixed;
+    top:18%;
+    left:5%;
+}
+
+#toDoList {
+    background-color: #1a1a1a;
+    width: 20%;
+    height: 48%;
+    position: absolute;
+    top: 15%;
+    left: 25%;
+    color: #FFFFFF;
+}
+
+#quickLinks {
+    position: absolute;
+    top: 12%;
+    left: 48%;
+}
+
+#block1 {
+    background-color: #1a1a1a;
+    width: 30%;
+    height: 25%;
+    position: absolute;
+    top: 70%;
+    color: #FFFFFF;
+}   
+
+#block2 {
+    background-color: 1a1a1a;
+    width: 30%;
+    height: 25%;
+    position: absolute;
+    top: 70%;
+    left:34%;
+    color: #FFFFFF;
+}
