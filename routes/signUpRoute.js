@@ -2,6 +2,8 @@ const express = require("express");
 const router = express.Router();
 const signUp = require("../models/signUpModel");
 
+//this will accept a post request from our /signUp route and save the credentials into an new user 
+//object which will be saved to the database
 router.route("/signUp").post((req, res) => {
     const Email = req.body.email;
     const Phone = req.body.phone;
@@ -18,13 +20,13 @@ router.route("/signUp").post((req, res) => {
         Username,
         Pswd
     });
-
+    console.log(newUser);
     newUser.save();
 });
 
 router.route("/home").get((req, res) => {
-    Note.find()
-    .then(foundNotes => res.json(foundNotes));
+    signUp.find()
+    .then(Users => res.json(Users));
 })
 
 module.exports = router;

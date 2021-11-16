@@ -1,11 +1,9 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import "./loginPage.css";
 import {Link} from "react-router-dom";
 
 function Login () {
 
-    useEffect()
-  
   document.getElementById("title").innerHTML = "Login | MindMap";
 
   return (
@@ -15,12 +13,14 @@ function Login () {
         <div id="loginContainer">
           {/*added get method and action to take to welcome Page, 
           change to POST method when someone knows how to use that*/} 
-          <form method="GET" action="welcomePage.html">
+          <form>
             <label>Username/Email Address: </label>
             <input className="inputBox" id="userID" type="text" name="user" placeholder="Username/Email Address" required="required" autoComplete="off" /><br /><br />
             <label>Password: </label>
             <input className="inputBox" id="pswd" type="password" name="pass" placeholder="Password" required="required" /><br /><br />
-            <input className="btn" id="submitBtn" type="submit" defaultValue="Log In" />
+
+
+            <button className="btn" ><Link to="/home" >Log In</Link></button>
           </form>
         </div>
         <div id="newUserContainer">

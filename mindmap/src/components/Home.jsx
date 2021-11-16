@@ -1,27 +1,18 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import "./welcomePage.css";
+import {Link} from "react-router-dom";
 
 function Home() {
+
     
-    const [user, setUser] = useState([{
-        username: '',
-        accountType: '',
-        toDoList: {
-
-        },
-        upcomingEvents: {
-
-        },
-
-    }])
-
     document.getElementById("title").innerHTML = "Home";
 
     return (
         <div>
             <div id="topBar">
                 <div id="username">User One</div>
-                <div id="accType">Student Account</div>
+                <div id="accType">Student Account</div> <br />
+                <div id="signOut"><Link to="/">Sign Out</Link></div>
                 <button id="pg1Button">Page 1</button>
                 <button id="pg2Button">Page 2 </button>
                 <button id="pg3Button">Page 3 </button>

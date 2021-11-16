@@ -16,13 +16,6 @@ function SignUp() {
     Username: '',
     Pswd: ''
   });
-  /**const [email, setEmail] = useState();
-  const [phone, setPhone] = useState();
-  const [Fname, setFname] = useState();
-  const [Lname, setLname] = useState();
-  const [username, setUsername] = useState();
-  const [pswd, setPswd] = useState();
-  const [vPswd, setVPswd] = useState();*/
 
   function handleChange(event) {
     const name = event.target.id;
@@ -50,13 +43,6 @@ function SignUp() {
       console.log(newUser);
       axios.post("http://localhost:3001/signUp", newUser);
       alert("User account has been successfully created!");
-      /**setEmail('');
-      setPhone('');
-      setFname('');
-      setLname('');
-      setUsername('');
-      setPswd('');
-      setVPswd('');*/
     }
     
 
