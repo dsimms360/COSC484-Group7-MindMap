@@ -7,6 +7,7 @@ function SignUp() {
 
   document.getElementById("title").innerHTML = "";
 
+  //const [user, setUser] = useState();
   const [input, setInput] = useState({
     Email: '',
     Phone: '',
@@ -14,34 +15,30 @@ function SignUp() {
     Lname: '',
     Username: '',
     Pswd: ''
-  })
+  });
+  /**const [email, setEmail] = useState();
+  const [phone, setPhone] = useState();
+  const [Fname, setFname] = useState();
+  const [Lname, setLname] = useState();
+  const [username, setUsername] = useState();
+  const [pswd, setPswd] = useState();
+  const [vPswd, setVPswd] = useState();*/
 
   function handleChange(event) {
-    const {name, value} = event.target;
-    console.log(name, value);
+    const name = event.target.id;
+    const value = event.target.value;
+    console.log(name);
+    console.log(value);
     setInput(prevInput => {
         return {
             ...prevInput,
             [name]: value
         }
     })
-  }
+}
 
   function handleClick(event) {
     event.preventDefault();
-    console.log(input["Pswd"])
-    console.log(input["vPswd"])
-
-    if (typeof input["Pswd"] !== "undefined" && typeof input["vPswd"] !== "undefined") {
-
-      if (input["Pswd"] !== input["vPswd"]) {
-  
-        alert("Passwords do not match!");
-  
-      }
-  
-    }
-    else{
       const newUser = {
         Email: input.Email,
         Phone: input.Phone,
@@ -50,13 +47,18 @@ function SignUp() {
         Username: input.Username,
         Pswd: input.Pswd
       }
+      console.log(newUser);
       axios.post("http://localhost:3001/signUp", newUser);
-      <Link to="/" />
       alert("User account has been successfully created!");
-      
+      /**setEmail('');
+      setPhone('');
+      setFname('');
+      setLname('');
+      setUsername('');
+      setPswd('');
+      setVPswd('');*/
     }
     
-}
 
   return(
       <div>
@@ -64,21 +66,21 @@ function SignUp() {
       <div className="userInput">
         <form id="signUpForm">
           <label>Email Address: </label>
-          <input onChange={handleChange} id="Email" className="inputBox" type="text" placeholder="Email Address" required="required" autoComplete="off"/><br /><br /><br />
+          <input onChange={handleChange} id="Email" className="inputBox" type="text" placeholder="Email Address" value={input.Email} required="required" autoComplete="off"/><br /><br /><br />
           <label>Phone Number: </label>
-          <input onChange={handleChange} id="Phone" className="inputBox" type="tel" placeholder="Phone Number" required="required" autoComplete="off"/><br /><br /><br />
+          <input onChange={handleChange} id="Phone" className="inputBox" type="tel" placeholder="Phone Number" value={input.Phone} required="required" autoComplete="off"/><br /><br /><br />
           <label>First Name: </label>
-          <input onChange={handleChange} id="Fname" className="inputBox" type="text" placeholder="First Name" required="required" autoComplete="off"/><br /><br /><br />
+          <input onChange={handleChange} id="Fname" className="inputBox" type="text" placeholder="First Name" value={input.Fname} required="required" autoComplete="off"/><br /><br /><br />
           <label>Last Name: </label>
-          <input onChange={handleChange} id="Lname" className="inputBox" type="text" placeholder="Last Name" required="required" autoComplete="off"/><br /><br /><br />
+          <input onChange={handleChange} id="Lname" className="inputBox" type="text" placeholder="Last Name" value={input.Lname} required="required" autoComplete="off"/><br /><br /><br />
           <label>Username: </label>
-          <input onChange={handleChange} id="Username" className="inputBox" type="text" placeholder="Username" required="required" autoComplete="off"/><br /><br /><br />
+          <input onChange={handleChange} id="Username" className="inputBox" type="text" placeholder="Username" value={input.Username} required="required" autoComplete="off"/><br /><br /><br />
           <label>Password: </label>
-          <input onChange={handleChange} id="Pswd" className="inputBox" type="password" placeholder="Password" required="required" autoComplete="off"/><br /><br /><br />
+          <input onChange={handleChange} id="Pswd" className="inputBox" type="password" placeholder="Password" value={input.Pswd} required="required" autoComplete="off"/><br /><br /><br />
           <label>Verify Password: </label>
           <input onChange={handleChange} id="vPswd" className="inputBox" type="password" placeholder="Verify Password" required="required" autoComplete="off"/><br /><br /><br />
           
-          <button onClick={handleClick} className="btn btn-lg btn-info"><Link to="/">Sign Up</Link></button>
+          <button onClick={handleClick} className="btn">Sign Up</button>
 
         </form>
       </div>
