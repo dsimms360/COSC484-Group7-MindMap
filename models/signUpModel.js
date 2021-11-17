@@ -5,6 +5,6 @@ const usersSchema = {
     content: String
 }
 
-const User = mongoose.model("Note", usersSchema);
+const User = mongoose.model("users", usersSchema);
 
 module.exports = User;
