@@ -1,18 +1,22 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
+import dotenv from 'dotenv';
 
+//for example file
 import signupRoute from './routes/signUpRoute.js'
 
+dotenv.config();
 // const mongodb = require("mongodb");
 const port = process.env.PORT || 5001;
 
 const app = express();
 
 app.use('/signup', signupRoute);
+// app.use('/posts', postRoutes);
 
-app.use(express.json({limit: "30mb", etended: true}));
-app.use(express.urlencoded({limit: "30mb", etended: true}));
+app.use(express.json());
+app.use(express.urlencoded());
 app.use(cors());
 
 // (err, db) => {}
@@ -20,8 +24,7 @@ app.use(cors());
 //     .then(() => app.listen(port, () => console.log("server running";)))
 //     .catch(() => )
 
-const mongoUrl = 'mongodb+srv://wbpgroup7:wbpgroup7Mind-Map@cluster0.uxoo6.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 
-mongoose.connect(mongoUrl)
+mongoose.connect(process.env.DB_URI)
     .then(() => app.listen(port, () => console.log(`server running on port: ${port}`)))
     .catch((err) => console.log(err.message));
