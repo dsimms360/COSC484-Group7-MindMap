@@ -1,10 +1,27 @@
 import React from 'react';
 import "./welcomePage.css";
 import {Link} from "react-router-dom";
+import QuickLink from "./Quick_Links/QuickLink";
+import {useState} from 'react';
+import AddLink from "./Quick_Links/AddLink";
+import Links from "./Quick_Links/Links";
 
 function Home() {
 
-    
+    const[showAddLink, setShowAddLink] = useState(false);
+    const[links, setLinks] = useState([]);
+
+    const addLink = (link) => {
+        const id = Math.floor(Math.random() *10000) + 1
+        console.log(id)
+        const newLink = {id, ...link }
+        setLinks([...links, newLink])
+      }
+      const deleteLink = (id) => {
+        setLinks(links.filter((link) => link.id !== id))
+      }
+
+
     document.getElementById("title").innerHTML = "Home";
 
     return (
@@ -18,18 +35,26 @@ function Home() {
                 <button id="pg3Button">Page 3 </button>
             </div>
             <div id="progress">
-                <label for= "progressBar">Weekly Progress<br/></label>    
+                <label id= "progressBarLabel">Weekly Progress<br/></label>    
                 <progress id="progressBar" value = "40" max="100"></progress>
             </div>
             <br/>
             <div id="events">
-                <label for="events" id="eventsLabel">Upcoming Events</label>
+                <label id="eventsLabel">Upcoming Events</label>
                 <div>Events Go here</div>
             </div>
             <div id="toDoList">To Do List goes here</div>
-            <div id="quickLinks"><h4>Quick Links go here</h4>
-                <a href="https://www.towson.edu/">towson.edu</a><br/>
-                <a href="https://www.google.com/">google.com</a>        
+            <div id="quickLinks">
+                <div className="container">
+                    <QuickLink  onAdd={() => setShowAddLink(!showAddLink)} showAdd={showAddLink} />
+                    {showAddLink && <AddLink onAdd={addLink} />}
+                    {links.length > 0 ? (
+                    <Links links={links} onDelete={deleteLink}/>
+                    ) : (
+                    "You don't have any quick links."
+                    )}
+                </div>
+                   
             </div>
         <div>
             <div id="block1">Something goes here</div>

@@ -6,7 +6,7 @@ html {
 }
 
 #topBar {
-    width: 67%;
+    width: 87%;
     height:10%;
     position: fixed;
     top: 0%;
@@ -58,11 +58,11 @@ a:hover {
 
 #calendar {
     background-color: #1a1a1a;
-    width: 33%;
+    width: 23%;
     height: 100%;
     position:absolute;
     top: 0%;
-    left:67%;
+    right:0%;
     color: #FFFFFF;
 }
 
@@ -120,3 +120,19 @@ a:hover {
     left:34%;
     color: #FFFFFF;
 }
+
+#quickLinks{
+
+}
+
+.container {
+    position: fixed;
+    max-width: 400px;
+    margin: 30px auto;
+    overflow: auto;
+    min-height: 300px;
+    /* Adding borders around components */
+    padding: 30px;
+    border-radius: 20px;
+    background-color: black;
+  }
