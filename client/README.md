@@ -4,6 +4,8 @@
     Overall, the goal of this application is to simplify the daily processes of those whose minds are all over the place and add some overall structure.
 
     Figma design link: https://www.figma.com/file/Qw01kJsojlHOI098972JJw/COSC-Website-Mock
+    
+    Google Api login for verification: https://www.youtube.com/watch?v=-OgU5EAcQmo
 
 
 ## Available Scripts
