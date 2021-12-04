@@ -6,13 +6,18 @@ import {useState} from 'react';
 import AddLink from "../../components/Quick_Links/AddLink";
 import Links from "../../components/Quick_Links/Links";
 
+import styles from './styles';
+
+
 // import Logout from '../../components/GoogleLogs/googleLogout';
 
 import UserBlock from '../../components/UserBlock/userBlock';
+import Calender from '../../components/calender/calender';
 
 
 
 function Home() {
+    let { compon } = styles;
 
     const[showAddLink, setShowAddLink] = useState(false);
     const[links, setLinks] = useState([]);
@@ -35,7 +40,7 @@ function Home() {
 
     return (
         <div>
-            <UserBlock className="userBlock" />
+            <UserBlock style={compon.block} className="userBlock" />
             {/* <div id="topBar">
                 <img src={authData.imageUrl || 'null'} alt="" />
                 <div id="username">{authData.name || 'null'}</div>
@@ -71,7 +76,7 @@ function Home() {
             <div id="block1">Something goes here</div>
             <br/>
             <div id="block2">And here as well</div>
-            <div  id="calendar">Calendar stuff goes here</div>
+            <Calender className="calender" />
         </div>
         </div>
     )
