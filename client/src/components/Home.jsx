@@ -6,10 +6,16 @@ import {useState} from 'react';
 import AddLink from "./Quick_Links/AddLink";
 import Links from "./Quick_Links/Links";
 
+import Logout from './googleLogin/googleLogout';
+
+
 function Home() {
 
     const[showAddLink, setShowAddLink] = useState(false);
     const[links, setLinks] = useState([]);
+
+    const authData = JSON.parse(localStorage.getItem("userToken"));
+
 
     const addLink = (link) => {
         const id = Math.floor(Math.random() *10000) + 1
@@ -27,9 +33,10 @@ function Home() {
     return (
         <div>
             <div id="topBar">
-                <div id="username">User One</div>
+                <img src={authData.imageUrl || 'null'} alt="" />
+                <div id="username">{authData.name || 'null'}</div>
                 <div id="accType">Student Account</div> <br />
-                <div id="signOut"><Link to="/">Sign Out</Link></div>
+                <div id="signOut"><Link to="/"><Logout /> </Link></div>
                 <button id="pg1Button">Page 1</button>
                 <button id="pg2Button">Page 2 </button>
                 <button id="pg3Button">Page 3 </button>

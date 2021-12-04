@@ -4,4 +4,3 @@ let databaseReference
 export default SignUp = (res, req) => {
     
 };
-

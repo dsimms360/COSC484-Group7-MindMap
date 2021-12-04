@@ -2,6 +2,10 @@ import React from 'react';
 import "./loginPage.css";
 import {Link} from "react-router-dom";
 
+import GoogleLogin from './googleLogin/googleLogin';
+
+
+
 function Login () {
 
   document.getElementById("title").innerHTML = "Login | MindMap";
@@ -18,7 +22,7 @@ function Login () {
             <input className="inputBox" id="userID" type="text" name="user" placeholder="Username/Email Address" required="required" autoComplete="off" /><br /><br />
             <label>Password: </label>
             <input className="inputBox" id="pswd" type="password" name="pass" placeholder="Password" required="required" /><br /><br />
-
+            <GoogleLogin />
 
             <button className="btn" ><Link to="/home" >Log In</Link></button>
           </form>
