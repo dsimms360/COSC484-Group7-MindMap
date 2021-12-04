@@ -30,9 +30,9 @@ function Home() {
                 <div id="username">User One</div>
                 <div id="accType">Student Account</div> <br />
                 <div id="signOut"><Link to="/">Sign Out</Link></div>
-                <button id="pg1Button">Page 1</button>
-                <button id="pg2Button">Page 2 </button>
-                <button id="pg3Button">Page 3 </button>
+                <button id="pg1Button"><Link to= "/School">School</Link></button>
+                <button id="pg2Button"><Link to= "/Work">Work</Link></button>
+                <button id="pg3Button"><Link to= "/Extra">Extra</Link></button>
             </div>
             <div id="progress">
                 <label id= "progressBarLabel">Weekly Progress<br/></label>    

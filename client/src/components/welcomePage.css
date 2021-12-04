@@ -1,8 +1,9 @@
 html {
     background-color: #525252;
     margin-left: 1%;
-    
+    font-family: Arial, Helvetica, sans-serif;
     color: #FFFFFF;
+    font-size: 40px;
 }
 
 #topBar {
@@ -11,11 +12,12 @@ html {
     position: fixed;
     top: 0%;
     left:0%;
-    background-color: #393939;
+    background-color: #4e4d4d;
+    box-shadow: 7px 8px 4px rgba(0, 0, 0, 0.5);
 }
 
 a {
-    color:crimson;
+    color:rgb(30, 218, 224);
 }
 
 a:hover {
@@ -28,26 +30,45 @@ a:hover {
 
 #pg1Button {
     position: fixed;
-    width:10%;
-    height:6%;
-    left:26%;
-    top:1.5%;
+left: 26%;
+font-size: 60px;
+font-family: Arial, Helvetica, sans-serif;
+top: 1.5%;
+bottom: 92.33%;
+width:10%;
+height: 5.2%;
+background: #D8D8D8;
+box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+border-radius: 16px;
 }
 
 #pg2Button {
     position: fixed;
+    left: 38%;
+    font-size: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 1.5%;
+    bottom: 92.33%;
     width:10%;
-    height:6%;
-    left:38%;
-    top:1.5%;
+    height: 5.2%;
+    background: #D8D8D8;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 16px;
 }
 
 #pg3Button {
-    position: fixed;
-    width:10%;
-    height:6%;
-    left:50%;
-    top:1.5%;
+      position: fixed;
+left: 50%;
+font-size: 60px;
+font-family: Arial, Helvetica, sans-serif;
+
+top: 1.5%;
+bottom: 92.33%;
+width:10%;
+height: 5.2%;
+background: #D8D8D8;
+box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+border-radius: 16px;
 }
 
 #progress {
@@ -67,11 +88,13 @@ a:hover {
 }
 
 #events {
-    background-color: 969495;
+    background-color: rgb(30, 218, 224);
     width: 21%;
     height: 30%;
     position: absolute;
     top: 33%;
+    border-radius: 30px;
+    box-shadow: 7px 8px 4px rgba(0, 0, 0, 0.5);
 }
 #eventsLabel {
     position: relative;
@@ -90,10 +113,14 @@ a:hover {
     background-color: #1a1a1a;
     width: 20%;
     height: 48%;
+    font-size: 50px;
+    
     position: absolute;
     top: 15%;
     left: 25%;
     color: #FFFFFF;
+    border-radius: 30px;
+    box-shadow: 7px 8px 4px rgba(0, 0, 0, 0.5);
 }
 
 #quickLinks {
@@ -108,21 +135,34 @@ a:hover {
     height: 25%;
     position: absolute;
     top: 70%;
+    border-radius: 30px;
+    font-size: 50px;
     color: #FFFFFF;
+    box-shadow: 7px 8px 4px rgba(0, 0, 0, 0.5);
 }   
 
 #block2 {
-    background-color: 1a1a1a;
+    background-color: rgb(30, 218, 224);
     width: 30%;
     height: 25%;
     position: absolute;
+    border-radius: 30px;
     top: 70%;
     left:34%;
-    color: #FFFFFF;
+    color: #ffffff;
+    box-shadow: 7px 8px 4px rgba(0, 0, 0, 0.5);
 }
 
 #quickLinks{
-
+    
+    width: 50%;
+    height: 25%;
+    position: absolute;
+    top: 20%;
+    border-radius: 30px;
+    font-size: 25px;
+    color: #FFFFFF;
+    
 }
 
 .container {
