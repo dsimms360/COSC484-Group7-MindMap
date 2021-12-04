@@ -14,9 +14,9 @@ function School() {
                 <div id="username">User One</div>
                 <div id="accType">Student Account</div> <br />
                 <div id="signOut"><Link to="/">Sign Out</Link></div>
-                <button id="pg1Button">Page 1</button>
-                <button id="pg2Button">Page 2 </button>
-                <button id="pg3Button">Page 3 </button>
+                <button id="pg1Button"><Link to= "/Home">Home</Link></button>
+                <button id="pg2Button"><Link to= "/Work">Work</Link></button>
+                <button id="pg3Button"><Link to= "/Extra">Extra</Link></button>
             </div>
             <div id="progress">
                 <label for= "progressBar">Weekly Progress<br/></label>    
@@ -35,7 +35,79 @@ function School() {
         <div>
             <div id="block1">Something goes here</div>
             <br/>
-            <div id="block2">And here as well</div>
+            <div id="block2">Tracker
+            <table border="1">
+                <tr>
+                    <th>Habits</th>
+                    <th>Sunday</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                    </tr>
+                <tr>
+                    <td>Input</td>
+                    <td><input type="checkbox" name="name1" />&nbsp;</td>
+                    <td><input type="checkbox" name="name1" />&nbsp;</td>
+                    <td><input type="checkbox" name="name1" />&nbsp;</td>
+                    <td><input type="checkbox" name="name1" />&nbsp;</td>
+                    <td><input type="checkbox" name="name1" />&nbsp;</td>
+                    <td><input type="checkbox" name="name1" />&nbsp;</td>
+                    <td><input type="checkbox" name="name1" />&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Input</td>
+                    <td><input type="checkbox" name="name1" />&nbsp;</td>
+                    <td><input type="checkbox" name="name1" />&nbsp;</td>
+                    <td><input type="checkbox" name="name1" />&nbsp;</td>
+                    <td><input type="checkbox" name="name1" />&nbsp;</td>
+                    <td><input type="checkbox" name="name1" />&nbsp;</td>
+                    <td><input type="checkbox" name="name1" />&nbsp;</td>
+                    <td><input type="checkbox" name="name1" />&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Input</td>
+                    <td><input type="checkbox" name="name1" />&nbsp;</td>
+                    <td><input type="checkbox" name="name1" />&nbsp;</td>
+                    <td><input type="checkbox" name="name1" />&nbsp;</td>
+                    <td><input type="checkbox" name="name1" />&nbsp;</td>
+                    <td><input type="checkbox" name="name1" />&nbsp;</td>
+                    <td><input type="checkbox" name="name1" />&nbsp;</td>
+                    <td><input type="checkbox" name="name1" />&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Input</td>
+                    <td><input type="checkbox" name="name1" />&nbsp;</td>
+                    <td><input type="checkbox" name="name1" />&nbsp;</td>
+                    <td><input type="checkbox" name="name1" />&nbsp;</td>
+                    <td><input type="checkbox" name="name1" />&nbsp;</td>
+                    <td><input type="checkbox" name="name1" />&nbsp;</td>
+                    <td><input type="checkbox" name="name1" />&nbsp;</td>
+                    <td><input type="checkbox" name="name1" />&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Input</td>
+                    <td><input type="checkbox" name="name1" />&nbsp;</td>
+                    <td><input type="checkbox" name="name1" />&nbsp;</td>
+                    <td><input type="checkbox" name="name1" />&nbsp;</td>
+                    <td><input type="checkbox" name="name1" />&nbsp;</td>
+                    <td><input type="checkbox" name="name1" />&nbsp;</td>
+                    <td><input type="checkbox" name="name1" />&nbsp;</td>
+                    <td><input type="checkbox" name="name1" />&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Input</td>
+                    <td><input type="checkbox" name="name1" />&nbsp;</td>
+                    <td><input type="checkbox" name="name1" />&nbsp;</td>
+                    <td><input type="checkbox" name="name1" />&nbsp;</td>
+                    <td><input type="checkbox" name="name1" />&nbsp;</td>
+                    <td><input type="checkbox" name="name1" />&nbsp;</td>
+                    <td><input type="checkbox" name="name1" />&nbsp;</td>
+                    <td><input type="checkbox" name="name1" />&nbsp;</td>
+                </tr>
+    </table></div>
             <div  id="calendar">Calendar stuff goes here</div>
         </div>
         </div>

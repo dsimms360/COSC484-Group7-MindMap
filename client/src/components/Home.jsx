@@ -43,7 +43,7 @@ function Home() {
                 <label id="eventsLabel">Upcoming Events</label>
                 <div>Events Go here</div>
             </div>
-            <div id="toDoList">To Do List goes here</div>
+            <div id="toDoList">To Do </div>
             <div id="quickLinks">
                 <div className="container">
                     <QuickLink  onAdd={() => setShowAddLink(!showAddLink)} showAdd={showAddLink} />
