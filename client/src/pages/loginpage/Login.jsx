@@ -2,7 +2,7 @@ import React from 'react';
 import "./loginPage.css";
 import {Link} from "react-router-dom";
 
-import GoogleLogin from './GoogleLogin/googleLogin';
+import GoogleLogin from '../../components/GoogleLogs/googleLogin';
 
 // import UserBlock from './UserBlock/userBlock';
 

@@ -1,14 +1,14 @@
 import React from 'react';
 import "./welcomePage.css";
 import {Link} from "react-router-dom";
-import QuickLink from "./Quick_Links/QuickLink";
+import QuickLink from "../../components/Quick_Links/QuickLink";
 import {useState} from 'react';
-import AddLink from "./Quick_Links/AddLink";
-import Links from "./Quick_Links/Links";
+import AddLink from "../../components/Quick_Links/AddLink";
+import Links from "../../components/Quick_Links/Links";
 
-import Logout from './GoogleLogin/googleLogout';
+// import Logout from '../../components/GoogleLogs/googleLogout';
 
-import UserBlock from './UserBlock/userBlock';
+import UserBlock from '../../components/UserBlock/userBlock';
 
 
 
@@ -35,7 +35,7 @@ function Home() {
 
     return (
         <div>
-            <UserBlock/>
+            <UserBlock className="userBlock" />
             {/* <div id="topBar">
                 <img src={authData.imageUrl || 'null'} alt="" />
                 <div id="username">{authData.name || 'null'}</div>

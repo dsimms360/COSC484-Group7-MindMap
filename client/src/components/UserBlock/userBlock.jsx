@@ -3,7 +3,7 @@ import styles from './styles';
 import { Link } from "react-router-dom";
 
 
-import Logout from '../GoogleLogin/googleLogout';
+import Logout from '../GoogleLogs/googleLogout';
 
 
 
