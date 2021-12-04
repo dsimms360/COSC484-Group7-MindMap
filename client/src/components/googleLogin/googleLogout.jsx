@@ -2,6 +2,8 @@ import React from 'react';
 import { useGoogleLogout } from 'react-google-login';
 import google from '../../icon/google.svg'
 
+import './style.css';
+
 const clientId =
     '707788443358-u05p46nssla3l8tmn58tpo9r5sommgks.apps.googleusercontent.com';
 
@@ -25,9 +27,9 @@ function Logout() {
 
     return (
         <button onClick={signOut} className="button">
-            <img src={google} alt="google login" className="icon"></img>
-
-            <span className="buttonText">Sign out</span>
+            {/* <img src={google} alt="google login" className="icon"></img> */}
+            Sign out
+            {/* <span className="buttonText">Sign out</span> */}
         </button>
     );
 }

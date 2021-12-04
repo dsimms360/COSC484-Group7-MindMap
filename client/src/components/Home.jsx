@@ -6,7 +6,10 @@ import {useState} from 'react';
 import AddLink from "./Quick_Links/AddLink";
 import Links from "./Quick_Links/Links";
 
-import Logout from './googleLogin/googleLogout';
+import Logout from './GoogleLogin/googleLogout';
+
+import UserBlock from './UserBlock/userBlock';
+
 
 
 function Home() {
@@ -32,7 +35,8 @@ function Home() {
 
     return (
         <div>
-            <div id="topBar">
+            <UserBlock/>
+            {/* <div id="topBar">
                 <img src={authData.imageUrl || 'null'} alt="" />
                 <div id="username">{authData.name || 'null'}</div>
                 <div id="accType">Student Account</div> <br />
@@ -40,12 +44,12 @@ function Home() {
                 <button id="pg1Button">Page 1</button>
                 <button id="pg2Button">Page 2 </button>
                 <button id="pg3Button">Page 3 </button>
-            </div>
-            <div id="progress">
+            </div> */}
+            {/* <div id="progress">
                 <label id= "progressBarLabel">Weekly Progress<br/></label>    
                 <progress id="progressBar" value = "40" max="100"></progress>
             </div>
-            <br/>
+            <br/> */}
             <div id="events">
                 <label id="eventsLabel">Upcoming Events</label>
                 <div>Events Go here</div>

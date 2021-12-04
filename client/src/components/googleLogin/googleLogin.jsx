@@ -38,10 +38,18 @@ function Login() {
         // prompt: 'consent',
     });
 
+    
+
     return (
-        <button onClick={() => signIn()} className="button">
-            <img src={google} alt="google login" className="icon"></img>
-        </button>
+        <div>
+            <button className="logobutton" onClick={() => signIn()}>
+                <img src={google} alt="google login" className="icon" ></img>
+                {/* <h4>Login with Google</h4> */}
+            </button> <br/>
+            <button className="loginText" onClick={() => signIn()} >
+                Login with Google
+            </button>
+        </div>
     );
 }
 
