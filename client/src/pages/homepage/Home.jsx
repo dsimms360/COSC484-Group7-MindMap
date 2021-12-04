@@ -1,23 +1,16 @@
 import React from 'react';
 import "./welcomePage.css";
-import {Link} from "react-router-dom";
 import QuickLink from "../../components/Quick_Links/QuickLink";
 import {useState} from 'react';
 import AddLink from "../../components/Quick_Links/AddLink";
 import Links from "../../components/Quick_Links/Links";
 
-import styles from './styles';
 
-
-// import Logout from '../../components/GoogleLogs/googleLogout';
-
-import UserBlock from '../../components/UserBlock/userBlock';
 import Calender from '../../components/calender/calender';
-
+import Navbar from '../../components/Navbar/index';
 
 
 function Home() {
-    let { compon } = styles;
 
     const[showAddLink, setShowAddLink] = useState(false);
     const[links, setLinks] = useState([]);
@@ -40,21 +33,13 @@ function Home() {
 
     return (
         <div>
-            <UserBlock style={compon.block} className="userBlock" />
-            {/* <div id="topBar">
-                <img src={authData.imageUrl || 'null'} alt="" />
-                <div id="username">{authData.name || 'null'}</div>
-                <div id="accType">Student Account</div> <br />
-                <div id="signOut"><Link to="/"><Logout /> </Link></div>
-                <button id="pg1Button">Page 1</button>
-                <button id="pg2Button">Page 2 </button>
-                <button id="pg3Button">Page 3 </button>
-            </div> */}
-            {/* <div id="progress">
+            <Navbar/>
+    
+            <div id="progress">
                 <label id= "progressBarLabel">Weekly Progress<br/></label>    
                 <progress id="progressBar" value = "40" max="100"></progress>
             </div>
-            <br/> */}
+            <br/>
             <div id="events">
                 <label id="eventsLabel">Upcoming Events</label>
                 <div>Events Go here</div>

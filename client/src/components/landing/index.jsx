@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "./ButtonElements";
-// import { withRouter } from "react-router-dom";
-
+import { useGoogleLogin } from 'react-google-login';
+import { refreshTokenSetup } from '../../utils/refreshToken';
 import Video from "../../videos/video.mp4";
 import {
   HeroContainer,
@@ -15,45 +15,27 @@ import {
   ArrowRight,
 } from "./HeroElements";
 
-
-// import React from 'react';
-import { useGoogleLogin } from 'react-google-login';
-import { refreshTokenSetup } from '../../utils/refreshToken';
-// import google from '../../icon/google.svg'
 const clientId = '707788443358-u05p46nssla3l8tmn58tpo9r5sommgks.apps.googleusercontent.com';
 
-
-function HeroSection(props) {
+function HeroSection() {
   const [hover, setHover] = useState(false);
 
   const onHover = () => {
     setHover(!hover);
   };
 
-  // const handleClickTopics = () => {
-  //   props.history.push("/topics");
-  // };
-
-
-// login functions
   const onSuccess = (res) => {
     console.log('Login Success: currentUser:', res.profileObj);
     localStorage.setItem(
         "userToken",
         JSON.stringify(res.profileObj)
     );
-    // alert(
-    //     `Logged in successfully welcome ${res.profileObj.name}`
-    // );
     refreshTokenSetup(res);
     window.location = "/home";
 };
 
 const onFailure = (res) => {
     console.log('Login failed: res:', res);
-    // alert(
-    //     `Failed to login.`
-    // );
 };
 
 const { signIn } = useGoogleLogin({
@@ -62,8 +44,6 @@ const { signIn } = useGoogleLogin({
     clientId,
     isSignedIn: true,
     accessType: 'offline',
-    // responseType: 'code',
-    // prompt: 'consent',
 });
 
 
@@ -80,7 +60,6 @@ const { signIn } = useGoogleLogin({
         <HeroBtnWrapper>
           <Button
             onClick={() => signIn()}            
-            // onClick={handleClickTopics}
             to="/topics"
             smooth={true}
             duration={500}
