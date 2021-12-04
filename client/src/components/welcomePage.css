@@ -3,7 +3,7 @@ html {
     margin-left: 1%;
     font-family: Arial, Helvetica, sans-serif;
     color: #FFFFFF;
-    font-size: 40px;
+    font-size: 20px;
 }
 
 #topBar {
@@ -31,7 +31,7 @@ a:hover {
 #pg1Button {
     position: fixed;
 left: 26%;
-font-size: 60px;
+font-size: 40px;
 font-family: Arial, Helvetica, sans-serif;
 top: 1.5%;
 bottom: 92.33%;
@@ -45,7 +45,7 @@ border-radius: 16px;
 #pg2Button {
     position: fixed;
     left: 38%;
-    font-size: 60px;
+    font-size: 40px;
     font-family: Arial, Helvetica, sans-serif;
     top: 1.5%;
     bottom: 92.33%;
@@ -59,7 +59,7 @@ border-radius: 16px;
 #pg3Button {
       position: fixed;
 left: 50%;
-font-size: 60px;
+font-size: 40px;
 font-family: Arial, Helvetica, sans-serif;
 
 top: 1.5%;
