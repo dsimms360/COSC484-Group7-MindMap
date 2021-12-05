@@ -26,6 +26,7 @@ export const Nav = styled.nav`
 export const NavProfile = styled.img`
   height:40;
   weight:40;
+  border-radius: 20px;
 `;
 
 export const NavbarContainer = styled.div`
