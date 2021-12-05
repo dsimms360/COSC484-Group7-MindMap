@@ -49,6 +49,11 @@ export const NavOption = styled(LinkR)`
   margin-left: 24px;
   font-weight: bold;
   text-decoration: none;
+
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    color: ${({ primary }) => (primary ? "#ffffff" : "#F9A826")};
+  }
 `;
 export const NavText = styled.strong`
   color: #fff;

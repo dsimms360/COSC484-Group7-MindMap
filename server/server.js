@@ -4,14 +4,14 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 dotenv.config();
 
-import signup from "./routes/signup_route.js";
+import routes from "./routes/dbRoutes.js";
 
 const port = process.env.PORT || 8001;
 
 const app = express();
 
-app.use("/", signup);
-app.use("*", (req, res) => res.status(404).json({error: "404: page not found."}));
+app.use("/", routes);
+app.use("*", (req, res) => res.status(404).send({error: "\x1b[37m 404: page not found."}));
 
 app.use(express.json());
 app.use(express.urlencoded({etended: true}));
