@@ -3,6 +3,7 @@ import { Button } from "./ButtonElements";
 import { useGoogleLogin } from 'react-google-login';
 import { refreshTokenSetup } from '../../utils/refreshToken';
 import Video from "../../videos/video.mp4";
+import googleLogo from '../../icon/google.svg'
 import {
   HeroContainer,
   HeroBg,
@@ -70,8 +71,9 @@ const { signIn } = useGoogleLogin({
             dark="true"
             onMouseEnter={onHover}
             onMouseLeave={onHover}
-          >
-            Google Sign In {hover ? <ArrowForward /> : <ArrowRight />}
+            >
+            <img src={googleLogo} alt="google login" className="icon"></img>
+            &ensp; Google Sign In {hover ? <ArrowForward /> : <ArrowRight />}
           </Button>
         </HeroBtnWrapper>
       </HeroContent>
