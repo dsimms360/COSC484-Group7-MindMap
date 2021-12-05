@@ -55,7 +55,7 @@ const { signIn } = useGoogleLogin({
       <HeroContent>
         <HeroH1>Mind Map</HeroH1>
         <HeroP>
-          We are here to simply things for you!
+          Needs a good intro!
         </HeroP>
         <HeroBtnWrapper>
           <Button
