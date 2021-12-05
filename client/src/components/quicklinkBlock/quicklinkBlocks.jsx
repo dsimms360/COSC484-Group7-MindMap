@@ -4,7 +4,7 @@ export const Card = styled.div`
 
   position: absolute;
   left: 3.4%;
-  right: 62.78%;
+  right: 51.00%;
   top: 74.78%;
   bottom: 6.22%;
 

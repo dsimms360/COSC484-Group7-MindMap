@@ -18,35 +18,35 @@ import {
 
 const clientId = '707788443358-u05p46nssla3l8tmn58tpo9r5sommgks.apps.googleusercontent.com';
 
-function HeroSection() {
-  const [hover, setHover] = useState(false);
+  function HeroSection() {
+    const [hover, setHover] = useState(false);
 
-  const onHover = () => {
-    setHover(!hover);
+    const onHover = () => {
+      setHover(!hover);
+    };
+
+    const onSuccess = (res) => {
+      console.log('Login Success: currentUser:', res.profileObj);
+
+      localStorage.setItem(
+          "userToken",
+          JSON.stringify(res.profileObj)
+      );
+      refreshTokenSetup(res);
+      window.location = "/home";
   };
 
-  const onSuccess = (res) => {
-    console.log('Login Success: currentUser:', res.profileObj);
-    localStorage.setItem(
-        "userToken",
-        JSON.stringify(res.profileObj)
-    );
-    refreshTokenSetup(res);
-    window.location = "/home";
-};
+  const onFailure = (res) => {
+      console.log('Login failed: error:', res);
+  };
 
-const onFailure = (res) => {
-    console.log('Login failed: res:', res);
-};
-
-const { signIn } = useGoogleLogin({
-    onSuccess,
-    onFailure,
-    clientId,
-    isSignedIn: true,
-    accessType: 'offline',
-});
-
+  const { signIn } = useGoogleLogin({
+      onSuccess,
+      onFailure,
+      clientId,
+      isSignedIn: true,
+      accessType: 'offline',
+  });
 
   return (
     <HeroContainer id="home">

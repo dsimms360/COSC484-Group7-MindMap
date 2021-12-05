@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const Card = styled.div`
 
   position: absolute;
-  left: 40.69%;
-  right: 25.49%;
+  left: 53.00%;
+  right: 3.70%;
   top: 74.78%;
   bottom: 6.22%;
 
