@@ -3,7 +3,7 @@ import { Card } from "./eventsBlocks";
 function EventsBlock (){
     return(
         <>
-        <Card><br/>Events will be here</Card>
+        <Card><br/>Add events form will be here</Card>
         </>
     );
 

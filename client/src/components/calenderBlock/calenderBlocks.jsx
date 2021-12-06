@@ -3,15 +3,13 @@ import styled from "styled-components";
 export const Card = styled.div`
 
   position: absolute;
-  left: 74.58%;
-  right: 3.75%;
+  left: 32.50%;
+  right: 28.78%;
   top: 13%;
-  bottom: 33.67%;
+  bottom: 32.22%;
 
-  background: white;
-  mix-blend-mode: normal;
-  opacity: 0.75;
-  box-shadow: -1px 0px 4px rgba(0, 0, 0, 0.5);
-  border-radius: 30px;
+  background: #494848;
+  box-shadow: 7px 8px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 18px;
 
 `;

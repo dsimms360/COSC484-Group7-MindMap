@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Card = styled.div`
 
     position: absolute;
-    left: 8.61%;
+    left: 3.4%;
     right: 71.18%;
     top: 13.00%;
     bottom: 74.22%;
@@ -23,7 +23,7 @@ export const TotalBar = styled.div`
     // right: 71.18%;
     top: 40.00%;
     bottom: 20%;
-    width: 80%;
+    width: 82%;
 
     background: #D8D8D8;
     box-shadow: 6px 5px 4px rgba(0, 0, 0, 0.5);
