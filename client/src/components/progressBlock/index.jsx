@@ -1,9 +1,21 @@
-import { Card } from "./progressBlocks";
+import { 
+    Card, 
+    TotalBar, 
+    ProgressBar,
+    ProgressHeading 
+} from "./progressBlocks";
 
 function ProgressBlock (){
+    const now = 70;
     return(
         <>
-        <Card><br/>Progress will be here</Card>
+        <Card>
+            <ProgressHeading>Habit Progress</ProgressHeading>
+            <TotalBar>
+                <ProgressBar width={now+"%"} />
+            </TotalBar>
+
+        </Card>
         </>
     );
 

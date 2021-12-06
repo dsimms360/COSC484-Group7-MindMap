@@ -1,14 +1,5 @@
 import mongoose from 'mongoose';
 
-const progressSchema = mongoose.Schema({
-    progress: {
-        type: Number, 
-        required: true, 
-        min: 0, 
-        max: 100
-    }
-});
-
 const todolistSchema = mongoose.Schema({
     title: { 
         type: String, 
@@ -30,6 +21,7 @@ const notesSchema = mongoose.Schema({
 });
 
 const calenderSchema = mongoose.Schema({
+    title:{type: String}
     // title: { 
     //     type: String, 
     //     required: true
@@ -71,7 +63,6 @@ const eventSchema = mongoose.Schema({
 
 const dbSchema = mongoose.Schema({
     clientid: {type: String, required: true},
-    progress: [progressSchema],
     todolist: [todolistSchema],
     notes: [notesSchema],
     calender: [calenderSchema],

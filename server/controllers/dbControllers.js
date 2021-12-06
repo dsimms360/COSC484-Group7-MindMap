@@ -9,14 +9,6 @@ export const createClientID = (res, req) => {
     
 }
 
-export const getProgress = (res, req) => {
-    
-}
-
-export const createProgress = (res, req) => {
-    
-}
-
 export const getTodolist = (res, req) => {
     
 }

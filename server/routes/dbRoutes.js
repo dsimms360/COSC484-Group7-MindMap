@@ -5,8 +5,6 @@ const router = express.Router();
 import { 
     getClientID,
     createClientID,
-    getProgress,
-    createProgress,
     getTodolist,
     createTodolist, 
     getNote, 
@@ -20,9 +18,6 @@ import {
 
 router.route("/clientid").get(getClientID);
 router.route("/clientid").post(createClientID);
-
-router.route("/progress").get(getProgress);
-router.route("/progress").post(createProgress);
 
 router.route("/todolist").get(getTodolist);
 router.route("/todolist").post(createTodolist);

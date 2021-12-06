@@ -16,6 +16,7 @@ import EventsBlock from '../../components/eventsBlock/index';
 import ProgressBlock from '../../components/progressBlock/index';
 
 function Home() {
+    document.getElementById("title").innerHTML = "Mind Map";
 
     const[showAddLink, setShowAddLink] = useState(false);
     const[links, setLinks] = useState([]);
@@ -32,9 +33,6 @@ function Home() {
       const deleteLink = (id) => {
         setLinks(links.filter((link) => link.id !== id))
       }
-
-
-    document.getElementById("title").innerHTML = "Home";
 
     return (
         <>

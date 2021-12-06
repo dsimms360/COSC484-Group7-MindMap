@@ -8,7 +8,7 @@ export const Card = styled.div`
   top: 74.78%;
   bottom: 6.22%;
 
-  background: white;
+  background: #DF3434;
   mix-blend-mode: normal;
   opacity: 0.9;
   box-shadow: 6px 7px 4px rgba(0, 0, 0, 0.5);
