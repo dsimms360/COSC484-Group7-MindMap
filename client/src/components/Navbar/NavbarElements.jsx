@@ -4,16 +4,20 @@ import styled from "styled-components";
 
 export const Nav = styled.nav`
 
-  background: #181717;
+  // background: #D8D8D8;
+  background: #494848;
+  mix-blend-mode: normal;
   height: 80px;
-  width: 100%;
+  width: 96%;
   margin-top: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1rem;
   position: sticky;
-  top: 0;
+  top: 2%;
+  left: 2%;
+  right: 2%;
   z-index: 10;
   border-radius: 30px;
 

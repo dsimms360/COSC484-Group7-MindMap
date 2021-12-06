@@ -39,7 +39,7 @@ const Navbar = () => {
             <NavProfile src={authData.imageUrl || 'null'} alt="user profile"></NavProfile>
             {/* <img  /> */}
             <NavText>
-            User: {authData.name || 'null'}
+            User:&nbsp; {authData.name || 'null'}
             </NavText>
             <NavOption onClick={signOut} to="/">
               Sign Out

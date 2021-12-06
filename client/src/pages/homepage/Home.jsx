@@ -4,6 +4,7 @@ import {useState} from 'react';
 import AddLink from "../../components/Quick_Links/AddLink";
 import Links from "../../components/Quick_Links/Links";
 
+import { FullBackground } from './background';
 
 import Calender from '../../components/calender/calender';
 import Navbar from '../../components/navbar/index';
@@ -36,6 +37,7 @@ function Home() {
 
     return (
         <>
+            <FullBackground>
             <Navbar/>
             <CalenderBlock/>
             <NotesBlocks/>
@@ -43,6 +45,7 @@ function Home() {
             <QuicklinkBlock/>
             <EventsBlock/>
             <ProgressBlock/>
+            </FullBackground>
     
             {/* <div id="progress">
                 <label id= "progressBarLabel">Weekly Progress<br/></label>    

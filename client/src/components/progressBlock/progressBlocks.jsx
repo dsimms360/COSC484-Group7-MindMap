@@ -5,11 +5,11 @@ export const Card = styled.div`
     position: absolute;
     left: 3.4%;
     right: 71.18%;
-    top: 13.00%;
-    bottom: 74.22%;
+    top: 16.50%;
+    bottom: 70.72%;
 
-    background: #494848;;
-    box-shadow: 6px 5px 4px rgba(0, 0, 0, 0.5);
+    background: #242424;
+    // box-shadow: 6px 5px 4px rgba(0, 0, 0, 0.5);
     border-radius: 20px;
 
 `;

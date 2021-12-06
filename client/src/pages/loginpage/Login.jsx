@@ -1,12 +1,15 @@
 import React from 'react';
 
 import HeroSection from '../landing/index';
-import './loginPage.css';
+
+import { FullBackground } from './background';
 
 function Login () {
 
   return (
+    <FullBackground>
       <HeroSection />
+    </FullBackground>
   );
 
 }
