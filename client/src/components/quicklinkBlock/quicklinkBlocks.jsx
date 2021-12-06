@@ -15,3 +15,52 @@ export const Card = styled.div`
   border-radius: 8px;
 
 `;
+
+export const HeadingBlock = styled.div`
+  position: absolute;
+  left: 2.0%;
+  right: 51.00%;
+  top: 8.00%;
+  bottom: 70.22%;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-size: large;
+  // font-weight: normal;
+  font-size: x-large;
+  
+
+  // for placement test
+  // background: purple;
+
+`;
+
+export const LinksBlock = styled.div`
+  position: absolute;
+  left: 2.0%;
+  right: 51.0%;
+  top: 31.00%;
+  bottom: 6.22%;
+  heigth:100%;
+  width: 47%;
+
+  // for placement test
+  // background: purple;
+  // text-align: center;
+  // display: table;
+  // display: table-cell;
+  //   vertical-align: middle;
+  
+`;
+
+export const ButtonBlock = styled.div`
+  position: absolute;
+  left: 50.0%;
+  right: 2.0%;
+  top: 8.00%;
+  bottom: 6.22%;
+
+  // for placement test
+  // background: purple;
+`;
+

@@ -18,23 +18,7 @@ import ProgressBlock from '../../components/progressBlock/index';
 
 function Home() {
     document.getElementById("title").innerHTML = "Mind Map";
-
-    const[showAddLink, setShowAddLink] = useState(false);
-    const[links, setLinks] = useState([]);
-
-    const authData = JSON.parse(localStorage.getItem("userToken"));
-
-
-    const addLink = (link) => {
-        const id = Math.floor(Math.random() *10000) + 1
-        console.log(id)
-        const newLink = {id, ...link }
-        setLinks([...links, newLink])
-      }
-      const deleteLink = (id) => {
-        setLinks(links.filter((link) => link.id !== id))
-      }
-
+    
     return (
         <>
             <FullBackground>
@@ -78,6 +62,21 @@ function Home() {
                 <div id="block2">And here as well</div>
                 <Calender className="calender" />
             </div> */}
+
+
+
+            {/* <div id="quickLinks">
+                <div className="container">
+                    <QuickLink  onAdd={() => setShowAddLink(!showAddLink)} showAdd={showAddLink} />
+                    {showAddLink && <AddLink onAdd={addLink} />}
+                    {links.length > 0 ? (
+                    <Links links={links} onDelete={deleteLink}/>
+                    ) : (
+                    "You don't have any quick links."
+                    )}
+                </div>
+            </div> */}
+
 
         </>
     )

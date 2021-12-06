@@ -60,8 +60,8 @@ export const ProgressHeading = styled.div`
     // font-family: "Lucida Console", "Courier New", monospace;
     font-family: "Roboto";
     font-style: normal;
-    font-size: large;
-    font-weight: normal;
+    // font-weight: normal;
+    font-size: x-large;
     
 
     // background: blue;
