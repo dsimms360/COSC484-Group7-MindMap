@@ -1,9 +1,18 @@
-import { Card } from "./notesBlocks";
+import { 
+    Card,
+    HeadingBlock,
+    BodyBlock 
+} from "./notesBlocks";
 
 function NotesBlocks (){
     return (
         <>
-        <Card> <br/> Notes goes here </Card>
+        <Card>
+            <HeadingBlock>Notes</HeadingBlock>
+            <BodyBlock>
+                Acctual notes taking block. note: this is not an input block yet
+            </BodyBlock>
+        </Card>
         </>
     );
 }

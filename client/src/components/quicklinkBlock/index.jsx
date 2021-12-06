@@ -31,7 +31,7 @@ function QuicklinkBlock (){
     return(
         <>
         <Card>
-            <HeadingBlock>Quick Links:</HeadingBlock>
+            <HeadingBlock>Quick Links</HeadingBlock>
 
             <ButtonBlock>
                 <QuickLink  onAdd={() => setShowAddLink(!showAddLink)} showAdd={showAddLink} />

@@ -29,7 +29,7 @@ export const HeadingBlock = styled.div`
   
 
   // for placement test
-  background: purple;
+  // background: purple;
 
 `;
 
@@ -43,7 +43,7 @@ export const ButtonBlock = styled.div`
   
 
   // for placement test
-  background: purple;
+  // background: purple;
 `;
 
 export const FormBlock = styled.div`
@@ -54,5 +54,5 @@ export const FormBlock = styled.div`
   bottom: 2.0%;
 
   // for placement test
-  background: purple;
+  // background: purple;
 `;

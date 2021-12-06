@@ -32,7 +32,7 @@ export const HeadingBlock = styled.div`
   
 
   // for placement test
-  background: purple;
+  // background: purple;
 
 `;
 
@@ -48,7 +48,7 @@ export const ButtonBlock = styled.div`
   
 
   // for placement test
-  background: purple;
+  // background: purple;
 `;
 
 export const DisplayBlock = styled.div`
@@ -61,7 +61,7 @@ export const DisplayBlock = styled.div`
   width: 47%;
 
   // for placement test
-  background: purple;
+  // background: purple;
   // text-align: center;
   // display: table;
   // display: table-cell;
@@ -77,5 +77,5 @@ export const FormBlock = styled.div`
   bottom: 6.22%;
 
   // for placement test
-  background: purple;
+  // background: purple;
 `;
