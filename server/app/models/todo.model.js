@@ -1,19 +1,19 @@
 const mongoose = require("mongoose");
 
-const QuickLink = mongoose.model(
-    "Quicklink",
+const Todo = mongoose.model(
+    "Todo",
     new mongoose.Schema({
         googleId: {
             type: String,
             required: true
         },
-        title: {
+        task: {
             type: String,
         },
-        link: {
-            type: String,
+        check: {
+            type: Boolean,
         }
     })
 );
 
-module.exports = QuickLink;
+module.exports = Todo;

@@ -1,16 +1,17 @@
 const mongoose = require('mongoose');
 const response = require('../lib/responseLib');
-const QuicklinkModel = mongoose.model('Quicklink');
+const TodoModel = mongoose.model('Todo');
 
 // add quicklink
-let createQuicklink = (req, res) => {
-    let newQuicklink = new QuicklinkModel({
+let createTodo = (req, res) => {
+    let newTodo = new TodoModel({
         googleId: req.body.googleId,
-        title: req.body.title, 
-        link: req.body.link
+        task: req.body.task, 
+        check: req.body.check
     })
+    newTodo.
 
-    newQuicklink.save((err, result) => {
+    newTodo.save((err, result) => {
         if (err) {
             let apiResponse = response.generate(true, 'Error', 500, err)
             res.send(apiResponse)
@@ -22,5 +23,5 @@ let createQuicklink = (req, res) => {
 }
 
 module.exports = {
-    createQuicklink: createQuicklink
+    createTodo: createTodo
 }

@@ -1,5 +1,6 @@
 const UserController = require('../controllers/user.controller');
 const QuicklinkController = require('../controllers/quicklink.controller');
+const TodoController = require('../controllers/todo.controller');
 
 let setRouter = (app) => {
     let baseUserUrl = '/user';
@@ -12,6 +13,10 @@ let setRouter = (app) => {
 
     let baseQuicklinkUrl = '/quicklink';
     app.post(baseQuicklinkUrl + '/create', QuicklinkController.createQuicklink);
+
+    let baseTodoUrl = '/todo';
+    app.post(baseTodoUrl + '/create', TodoController.createTodo);
+
 
 
 }

@@ -1,4 +1,3 @@
-const express = require('express')
 const mongoose = require('mongoose');
 const response = require('../lib/responseLib');
 const UserModel = mongoose.model('User');
