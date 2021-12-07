@@ -55,7 +55,7 @@ export const DisplayBlock = styled.div`
   position: absolute;
   left: 2.0%;
   right: 51.0%;
-  top: 31.00%;
+  top: 25.00%;
   bottom: 6.22%;
   heigth:100%;
   width: 47%;

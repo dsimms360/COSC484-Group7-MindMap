@@ -1,5 +1,5 @@
 import { Card } from "./calenderBlocks";
-
+import Calendar from 'react-calendar'
 function CalenderBlock (){
 
     // just to see the object (not really needed)
@@ -10,7 +10,10 @@ function CalenderBlock (){
 
     return(
         <>
-        <Card><br/>Calender will be here</Card>
+        <Card>
+        <Calendar
+          />
+        </Card>
         </>
     );
 

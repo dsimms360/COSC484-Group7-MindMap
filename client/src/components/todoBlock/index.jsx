@@ -10,9 +10,9 @@ function TodoBlock (){
     return(
         <>
         <Card>
-            <HeadingBlock>To Do List</HeadingBlock>
-            <DisplayBlock>Displaying all the tasks to do</DisplayBlock>
-            <ButtonBlock>Add button &emsp; Delete button</ButtonBlock>
+            <HeadingBlock>T Do List</HeadingBlock>
+            <DisplayBlock>Displaying all the test to do</DisplayBlock>
+            <ButtonBlock> &emsp; Delete button</ButtonBlock>
             <FormBlock>Respective forms will be here. Note: the purple background will be removed</FormBlock>
         </Card>
         </>
