@@ -1,6 +1,7 @@
 const UserController = require('../controllers/user.controller');
 const QuicklinkController = require('../controllers/quicklink.controller');
 const TodoController = require('../controllers/todo.controller');
+const EventController = require('../controllers/event.controller');
 
 let setRouter = (app) => {
     let baseUserUrl = '/user';
@@ -16,6 +17,9 @@ let setRouter = (app) => {
 
     let baseTodoUrl = '/todo';
     app.post(baseTodoUrl + '/create', TodoController.createTodo);
+    
+    let baseEventUrl = '/event';
+    app.post(baseEventUrl + '/create', EventController.createEvent);
 
 
 
