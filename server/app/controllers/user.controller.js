@@ -36,10 +36,8 @@ let viewByUserId = (req, res) => {
 
 // edit User
 let editUser = (req, res) => {
-
     let options = req.body;
     UserModel.findByIdAndUpdate(req.params.id, options, { multi: true }).exec((err, result) => {
-
         if (err) {
             let apiResponse = response.generate(true, 'Error', 500, err)
             res.send(apiResponse)
@@ -55,7 +53,6 @@ let editUser = (req, res) => {
 
 // delete User
 let deleteUser = (req, res) => {
-    // UserModel.findOneAndUpdate(req.params.id, { $set: { isActive: false } }).exec((err, result) => {
     UserModel.findByIdAndDelete(req.params.id).exec((err, result) => {
         if (err) {
             console.log(err)

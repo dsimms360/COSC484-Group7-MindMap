@@ -41,7 +41,43 @@ let viewByNoteId = (req, res) => {
     })
 }
 
+// edit note
+let editNote = (req, res) => {
+    let options = req.body;
+    NoteModel.findByIdAndUpdate(req.params.id, options, { multi: true }).exec((err, result) => {
+        if (err) {
+            let apiResponse = response.generate(true, 'Error', 500, err)
+            res.send(apiResponse)
+        } else if (result == undefined || result == null || result == '') {
+            let apiResponse = response.generate(true, 'No User Found', 500, null)
+            res.send(apiResponse)
+        } else {
+            let apiResponse = response.generate(true, 'Success', 200, result)
+            res.send(apiResponse)
+        }
+    })
+}
+
+// delete note
+let deleteNote = (req, res) => {
+    NoteModel.findByIdAndDelete(req.params.id).exec((err, result) => {
+        if (err) {
+            console.log(err)
+            let apiResponse = response.generate(true, 'Error', 500, err)
+            res.send(apiResponse)
+        } else if (result == undefined || result == null || result == '') {
+            let apiResponse = response.generate(true, 'No User Found', 500, null)
+            res.send(apiResponse)
+        } else {
+            let apiResponse = response.generate(true, 'Success', 200, result)
+            res.send(apiResponse)
+        }
+    })
+}
+
 module.exports = {
     createNote: createNote,
-    viewByNoteId: viewByNoteId
+    viewByNoteId: viewByNoteId,
+    editNote: editNote,
+    deleteNote: deleteNote
 }

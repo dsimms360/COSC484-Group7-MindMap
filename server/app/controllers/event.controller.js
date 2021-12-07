@@ -41,7 +41,43 @@ let viewByEventId = (req, res) => {
     })
 }
 
+// edit event
+let editEvent = (req, res) => {
+    let options = req.body;
+    EventModel.findByIdAndUpdate(req.params.id, options, { multi: true }).exec((err, result) => {
+        if (err) {
+            let apiResponse = response.generate(true, 'Error', 500, err)
+            res.send(apiResponse)
+        } else if (result == undefined || result == null || result == '') {
+            let apiResponse = response.generate(true, 'No User Found', 500, null)
+            res.send(apiResponse)
+        } else {
+            let apiResponse = response.generate(true, 'Success', 200, result)
+            res.send(apiResponse)
+        }
+    })
+}
+
+// delete event
+let deleteEvent = (req, res) => {
+    EventModel.findByIdAndDelete(req.params.id).exec((err, result) => {
+        if (err) {
+            console.log(err)
+            let apiResponse = response.generate(true, 'Error', 500, err)
+            res.send(apiResponse)
+        } else if (result == undefined || result == null || result == '') {
+            let apiResponse = response.generate(true, 'No User Found', 500, null)
+            res.send(apiResponse)
+        } else {
+            let apiResponse = response.generate(true, 'Success', 200, result)
+            res.send(apiResponse)
+        }
+    })
+}
+
 module.exports = {
     createEvent: createEvent,
-    viewByEventId: viewByEventId
+    viewByEventId: viewByEventId,
+    editEvent: editEvent,
+    deleteEvent: deleteEvent
 }

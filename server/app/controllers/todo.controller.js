@@ -40,7 +40,44 @@ let viewByTodoId = (req, res) => {
     })
 }
 
+// edit todo
+let editTodo = (req, res) => {
+    let options = req.body;
+    TodoModel.findByIdAndUpdate(req.params.id, options, { multi: true }).exec((err, result) => {
+        if (err) {
+            let apiResponse = response.generate(true, 'Error', 500, err)
+            res.send(apiResponse)
+        } else if (result == undefined || result == null || result == '') {
+            let apiResponse = response.generate(true, 'No User Found', 500, null)
+            res.send(apiResponse)
+        } else {
+            let apiResponse = response.generate(true, 'Success', 200, result)
+            res.send(apiResponse)
+        }
+    })
+}
+
+// delete todo
+let deleteTodo = (req, res) => {
+    TodoModel.findByIdAndDelete(req.params.id).exec((err, result) => {
+        if (err) {
+            console.log(err)
+            let apiResponse = response.generate(true, 'Error', 500, err)
+            res.send(apiResponse)
+        } else if (result == undefined || result == null || result == '') {
+            let apiResponse = response.generate(true, 'No User Found', 500, null)
+            res.send(apiResponse)
+        } else {
+            let apiResponse = response.generate(true, 'Success', 200, result)
+            res.send(apiResponse)
+        }
+    })
+}
+
+
 module.exports = {
     createTodo: createTodo,
-    viewByTodoId: viewByTodoId
+    viewByTodoId: viewByTodoId,
+    editTodo: editTodo,
+    deleteTodo: deleteTodo
 }
