@@ -1,11 +1,16 @@
+import React from "react";
+import Button from "./NotesButton"
 
-const Link = ({link, onDelete}) => {
+const QuickLink = ({onAdd, showAdd}) => {
     return(
-        <div>
-            <input type="checkbox"></input>
-            <label>{Link.note}</label>
-            </div>
+        <div className = 'Quick Links'>
+            <Button 
+                color={showAdd ? 'red' : 'green'} 
+                text={showAdd ? 'CLOSE' : 'ADD'} 
+                onClick={onAdd} 
+            />
+        </div>
     )
 }
 
-export default Link;
+export default QuickLink;
