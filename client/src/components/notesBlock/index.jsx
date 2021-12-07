@@ -10,7 +10,7 @@ function NotesBlocks (){
         <Card>
             <HeadingBlock>Notes</HeadingBlock>
             <BodyBlock>
-            
+            test
          
             </BodyBlock>
         </Card>
