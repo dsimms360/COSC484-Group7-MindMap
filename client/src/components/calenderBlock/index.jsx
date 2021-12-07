@@ -1,7 +1,6 @@
 import { Card } from "./calenderBlocks";
-import Calendar from 'react-calendar'
+import Calendar from 'react-calendar';
 import React, { useState } from 'react';
-import 'react-calendar/dist/Calendar.css';
 
 function CalenderBlock (){
 
