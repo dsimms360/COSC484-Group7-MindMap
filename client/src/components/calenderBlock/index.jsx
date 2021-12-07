@@ -2,8 +2,7 @@ import { Card } from "./calenderBlocks";
 import Calendar from 'react-calendar'
 import React, { useState } from 'react';
 import 'react-calendar/dist/Calendar.css';
-import Calend, { CalendarView } from 'calend' // import component
-import 'calend/dist/styles/index.css'; // import styles
+
 function CalenderBlock (){
 
     // just to see the object (not really needed)
