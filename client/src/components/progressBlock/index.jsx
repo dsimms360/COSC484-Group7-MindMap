@@ -6,6 +6,7 @@ import {
 } from "./progressBlocks";
 
 function ProgressBlock (){
+    
     const now = 70;
     return(
         <>
