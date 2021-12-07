@@ -3,7 +3,6 @@ import "./ToDo.css";
 
 const AddToDo = ({onAdd}) => {
     const[task, setTask] = useState('')
-    //const[link, setLink] = useState('')
 
     const onSubmit = (e) => {
         e.preventDefault()
@@ -11,16 +10,9 @@ const AddToDo = ({onAdd}) => {
             alert('Please add a new task')
             return
         }
-        /*console.log(link);
-        if(!link.includes("https://")){
-            let temp = link;
-            setLink("https://" + temp);
-            console.log(link);
-        }*/
         onAdd({task})
 
         setTask('')
-        //setLink('')
     }
 
 
@@ -37,15 +29,6 @@ const AddToDo = ({onAdd}) => {
                     onChange={(e) => setTask(e.target.value)} 
                 />
             </div>
-            {/*<div className = 'form-control'>
-                <label>Link</label>
-                <input 
-                    type = 'text' 
-                    placeholder = 'Add URL Link' 
-                    value={link} 
-                    onChange={(e) => setLink(e.target.value)} 
-                />
-            </div>*/}
 
             <input 
                 type='submit' 

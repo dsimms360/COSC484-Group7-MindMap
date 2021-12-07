@@ -2,7 +2,6 @@ import {
     Card,
     HeadingBlock,
     ButtonBlock,
-    FormBlock,
     DisplayBlock 
 } from "./todoBlocks";
 
@@ -22,6 +21,7 @@ function TodoBlock (){
         console.log(id)
         const newToDo = {id, ...td }
         setToDoArray([...todoarray, newToDo])
+
     }
     const deleteToDo = (id) => {
         setToDoArray(todoarray.filter((td) => td.id !== id))
@@ -31,8 +31,6 @@ function TodoBlock (){
         <>
         <Card>
             <HeadingBlock>To Do List</HeadingBlock>
-            {//<DisplayBlock>Displaying all the tasks to do</DisplayBlock>
-}
             <ButtonBlock><ToDo  onAdd={() => setShowAddToDo(!showAddToDo)} showAdd={showAddToDo} />
                 {showAddToDo && <AddTD onAdd={addToDo} />}</ButtonBlock>
             
@@ -43,8 +41,6 @@ function TodoBlock (){
                 "You don't have any tasks."
                 )}
             </DisplayBlock>
-            {//<FormBlock>Respective forms will be here. Note: the purple background will be removed</FormBlock>
-}
         </Card>
         </>
     );

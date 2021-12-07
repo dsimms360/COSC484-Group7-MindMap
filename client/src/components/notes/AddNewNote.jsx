@@ -3,7 +3,6 @@ import "./NewNote.css";
 
 const AddNote = ({onAdd}) => {
     const[note, setNote] = useState('')
-    //const[link, setLink] = useState('')
 
     const onSubmit = (e) => {
         e.preventDefault()
@@ -11,16 +10,9 @@ const AddNote = ({onAdd}) => {
             alert('Please add a new note')
             return
         }
-        /*console.log(link);
-        if(!link.includes("https://")){
-            let temp = link;
-            setLink("https://" + temp);
-            console.log(link);
-        }*/
         onAdd({note})
 
         setNote('')
-        //setLink('')
     }
 
 
@@ -37,15 +29,6 @@ const AddNote = ({onAdd}) => {
                     onChange={(e) => setNote(e.target.value)} 
                 />
             </div>
-            {/*<div className = 'form-control'>
-                <label>Link</label>
-                <input 
-                    type = 'text' 
-                    placeholder = 'Add URL Link' 
-                    value={link} 
-                    onChange={(e) => setLink(e.target.value)} 
-                />
-            </div>*/}
 
             <input 
                 type='submit' 

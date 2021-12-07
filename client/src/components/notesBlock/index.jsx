@@ -34,9 +34,6 @@ function NoteBlock (){
             </BodyBlock>
             <ButtonBlock><Note  onAdd={() => setShowAddNote(!showAddNote)} showAdd={showAddNote} />
                 {showAddNote && <AddNote onAdd={addNote} />}</ButtonBlock>
-            
-            }
-            
          
             
         </Card>
