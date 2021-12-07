@@ -6,7 +6,7 @@ const QuickLink = ({onAdd, showAdd}) => {
         <div className = 'Quick Links'>
             <Button 
                 color={showAdd ? 'red' : 'green'} 
-                text={showAdd ? 'Close' : 'Add'} 
+                text={showAdd ? 'CLOSE' : 'ADD'} 
                 onClick={onAdd} 
             />
         </div>
