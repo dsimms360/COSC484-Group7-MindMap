@@ -14,7 +14,7 @@ app.use("/", routes);
 app.use("*", (req, res) => res.status(404).send({error: "\x1b[37m 404: page not found."}));
 
 app.use(express.json());
-app.use(express.urlencoded({etended: true}));
+app.use(express.urlencoded({extended: true}));
 app.use(cors());
 
 mongoose.connect(process.env.DB_URI)
