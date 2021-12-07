@@ -36,6 +36,25 @@ export const HeadingBlock = styled.div`
   // background: purple;
 
 `;
+export const ButtonBlock = styled.div`
+  position: absolute;
+  left: 50.0%;
+  right: 2.0%;
+  top: 8.0%;
+  bottom: 80%;
+
+  .btn{
+  font-size: 12px;
+  padding: 5px 20px;
+  border-radius: 5px;
+  margin: 0px 0px;  
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif; 
+  }
+
+  // for placement test
+  // background: purple;
+`;
 
 export const BodyBlock = styled.form`
   position: absolute;
@@ -47,3 +66,35 @@ export const BodyBlock = styled.form`
   // for placement test
   // background: purple;
 `;
+
+export const DisplayBlock = styled.div`
+  position: absolute;
+  left: 2.0%;
+  right: 51.0%;
+  top: 25.00%;
+  bottom: 6.22%;
+  heigth:100%;
+  width: 47%;
+
+  // for placement test
+  // background: purple;
+  // text-align: center;
+  // display: table;
+  // display: table-cell;
+  //   vertical-align: middle;
+  
+`;
+
+export const FormBlock = styled.div`
+  position: absolute;
+  left: 50.0%;
+  right: 2.0%;
+  top: 21.0%;
+  bottom: 6.22%;
+
+  // for placement test
+  // background: purple;
+
+  
+  `
+;

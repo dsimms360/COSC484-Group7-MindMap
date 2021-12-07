@@ -8,6 +8,9 @@ import Links from "./Quick_Links/Links";
 import ToDoDisplay from "./ToDo/ToDoDisplay";
 import AddToDo from "./ToDo/AddToDo";
 import ToDoArray from "./ToDo/ToDoArray";
+import AddNote from "./notes/AddNote";
+import NoteDisplay from "/notes/NoteDisplay";
+import NotesArray from "./notes/NotesArray";
 
 function Home() {
 
@@ -35,6 +38,16 @@ function Home() {
       }
       const deleteToDo = (id) => {
         setTasks(tasks.filter((task) => task.id !== id))
+      }
+
+      const AddNote = (note) => {
+        const id = Math.floor(Math.random() *10000) + 1
+        console.log(id)
+        const newNote = {id, ...note }
+        setNotes([...notes, newNote])
+      }
+      const deleteNote = (id) => {
+        setNotes(notes.filter((note) => note.id !== id))
       }
 
     document.getElementById("title").innerHTML = "Home";
@@ -80,6 +93,17 @@ function Home() {
                     )}
                 </div>
                    
+            </div>
+            <div id="notes">
+                <div className="container">
+                    <NoteDisplay  onAdd={() => setShowAddNote(!showAddNote)} showAdd={showAddNote} />
+                    {showAddNote && <AddNote onAdd={AddNote} />}
+                    {NotesArray.length > 0 ? (
+                    <NotesArray links={notes} onDelete={deleteNote}/>
+                    ) : (
+                    "There are no notes."
+                    )}    
+                </div>    
             </div>
         <div>
             {/*<div id="block1">Something goes here</div>
