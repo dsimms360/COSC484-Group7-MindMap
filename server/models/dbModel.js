@@ -1,27 +1,45 @@
 import mongoose from 'mongoose';
 
-const todolistSchema = mongoose.Schema({
-    title: { 
-        type: String, 
+const userToken = mongoose.Schema({
+    email: {
+        type: String,
         required: true
     },
-    content: { 
+    familyName: {
+        type: String,
+    },
+    givenName: {
+        type: String,
+        required: true
+    },
+    googgleId: {
+        type: String,
+        required: true
+    },
+    imageUrl:{
+        type: String,
+        required: true
+    },
+    name: {
+        type: String,
+        required: true
+    }
+});
+
+const todolistSchema = mongoose.Schema({
+    task: { 
         type: String,
     }
 });
 
 const notesSchema = mongoose.Schema({
-    title: { 
-        type: String, 
-        required: true
-    },
-    content: { 
+    notes: { 
         type: String,
     }
 });
 
 const calenderSchema = mongoose.Schema({
-    title:{type: String}
+    // title:{type: String}
     // title: { 
     //     type: String, 
     //     required: true
@@ -34,9 +52,8 @@ const calenderSchema = mongoose.Schema({
 const quicklinkSchema = mongoose.Schema({
     title: { 
         type: String, 
-        required: true
     },
-    content: { 
+    link: { 
         type: String,
     }
 });
@@ -44,11 +61,9 @@ const quicklinkSchema = mongoose.Schema({
 const eventSchema = mongoose.Schema({
     eventid: {
         type: String,
-        required: true
     },
     title: { 
         type: String, 
-        required: true
     },
     starttime: {
         type: String
@@ -62,7 +77,7 @@ const eventSchema = mongoose.Schema({
 });
 
 const dbSchema = mongoose.Schema({
-    clientid: {type: String, required: true},
+    userToken: [userToken],
     todolist: [todolistSchema],
     notes: [notesSchema],
     calender: [calenderSchema],
