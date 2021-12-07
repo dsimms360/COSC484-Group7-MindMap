@@ -21,6 +21,25 @@ let createQuicklink = (req, res) => {
     })
 }
 
+// get quicklink by googleid (ignore the name)
+// note id is the googleID
+let viewByQuicklinkId = (req, res) => {
+    QuicklinkModel.findById(req.params.googleId, (err, result) => {
+        if (err) {
+            console.log(err)
+            let apiResponse = response.generate(true, 'Error', 500, err)
+            res.send(apiResponse)
+        } else if (result == undefined || result == null || result == '') {
+            let apiResponse = response.generate(true, 'No User found', 500, null)
+            res.send(apiResponse)
+        } else {
+            let apiResponse = response.generate(true, 'Success', 200, result)
+            res.send(apiResponse)
+        }
+    })
+}
+
 module.exports = {
-    createQuicklink: createQuicklink
+    createQuicklink: createQuicklink,
+    viewByQuicklinkId: viewByQuicklinkId
 }

@@ -15,8 +15,6 @@ let getUser = async (req, res) => {
         res.send(apiResponse)
     }
 }
-// end get all User
-
 
 // view by id User
 let viewByUserId = (req, res) => {
@@ -35,8 +33,6 @@ let viewByUserId = (req, res) => {
         }
     })
 }
-// end view by id User
-
 
 // edit User
 let editUser = (req, res) => {
@@ -56,8 +52,6 @@ let editUser = (req, res) => {
         }
     })
 }
-// end edit User
-
 
 // delete User
 let deleteUser = (req, res) => {
@@ -76,8 +70,6 @@ let deleteUser = (req, res) => {
         }
     })
 }
-// end delete User
-
 
 // add User
 let createUser = (req, res) => {
@@ -99,8 +91,6 @@ let createUser = (req, res) => {
     })
 }
 
-
-// export
 module.exports = {
     createUser: createUser,
     getUser: getUser,
