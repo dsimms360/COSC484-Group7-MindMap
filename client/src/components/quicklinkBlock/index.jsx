@@ -11,6 +11,8 @@ import QuickLink from '../Quick_Links/QuickLink';
 import AddLink from '../Quick_Links/AddLink';
 import Links from '../Quick_Links/Links';
 
+import axios from 'axios';
+
 // import Working from "./functionality";
 
 function QuicklinkBlock (){
@@ -23,6 +25,13 @@ function QuicklinkBlock (){
         console.log(id)
         const newLink = {id, ...link }
         setLinks([...links, newLink])
+        axios.post("http://localhost:8000/home/quicklink")
+        .then((response) => {
+            setShowAddLink(response.data);
+        })
+        .catch(error => {
+            setLinks(error)
+        });
     }
     const deleteLink = (id) => {
         setLinks(links.filter((link) => link.id !== id))

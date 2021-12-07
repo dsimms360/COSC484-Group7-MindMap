@@ -20,6 +20,8 @@ export const Nav = styled.nav`
   right: 2%;
   z-index: 10;
   border-radius: 30px;
+  box-shadow: 7px 8px 4px rgba(0, 0, 0, 0.5);
+
 
 
   @media screen and (max-width: 960px) {

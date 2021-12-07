@@ -15,37 +15,58 @@ import {
   ArrowForward,
   ArrowRight,
 } from "./HeroElements";
+import axios from 'axios';
+
+
 
 const clientId = '707788443358-u05p46nssla3l8tmn58tpo9r5sommgks.apps.googleusercontent.com';
 
-  function HeroSection() {
-    const [hover, setHover] = useState(false);
+function HeroSection() {
+  const [hover, setHover] = useState(false);
 
-    const onHover = () => {
-      setHover(!hover);
-    };
+  const onHover = () => {
+    setHover(!hover);
+  };
 
-    const onSuccess = (res) => {
-      console.log('Login Success: currentUser:', res.profileObj);
+  const onSuccess = (res) => {
+    console.log('Login Success: currentUser:', res.profileObj);
 
-      localStorage.setItem(
-          "userToken",
-          JSON.stringify(res.profileObj)
-      );
-      refreshTokenSetup(res);
-      window.location = "/home";
+    localStorage.setItem(
+      "userToken",
+      JSON.stringify(res.profileObj)
+    );
+    refreshTokenSetup(res);
+    const body = {
+      "firstName": res.profileObj.givenName,
+      "lastName": res.profileObj.familyName,
+      "googleId": res.profileObj.googleId,
+      "userImage": res.profileObj.imageUrl,
+      "email": res.profileObj.email
+    }
+    axios
+      .post('http://localhost:8000/user/create', body)
+      .then(response => {
+        console.log(response);
+        if (response.data.status === 200) {
+
+        }
+      })
+      .catch(err => {
+        console.log("error here", err.response)
+      })
+    window.location = "/home";
   };
 
   const onFailure = (res) => {
-      console.log('Login failed: error:', res);
+    console.log('Login failed: error:', res);
   };
 
   const { signIn } = useGoogleLogin({
-      onSuccess,
-      onFailure,
-      clientId,
-      isSignedIn: true,
-      accessType: 'offline',
+    onSuccess,
+    onFailure,
+    clientId,
+    isSignedIn: true,
+    accessType: 'offline',
   });
 
   return (
@@ -60,7 +81,7 @@ const clientId = '707788443358-u05p46nssla3l8tmn58tpo9r5sommgks.apps.googleuserc
         </HeroP>
         <HeroBtnWrapper>
           <Button
-            onClick={() => signIn()}            
+            onClick={() => signIn()}
             to="/topics"
             smooth={true}
             duration={500}
@@ -71,7 +92,7 @@ const clientId = '707788443358-u05p46nssla3l8tmn58tpo9r5sommgks.apps.googleuserc
             dark="true"
             onMouseEnter={onHover}
             onMouseLeave={onHover}
-            >
+          >
             <img src={googleLogo} alt="google login" className="icon"></img>
             &ensp; Google Sign In {hover ? <ArrowForward /> : <ArrowRight />}
           </Button>

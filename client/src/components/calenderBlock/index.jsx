@@ -1,5 +1,12 @@
 import { Card } from "./calenderBlocks";
 
+import Calend from 'calend';
+import 'calend/styles/index.css'; // import styles
+
+
+// import Calender from "../calender/calender";
+
+
 function CalenderBlock (){
 
     // just to see the object (not really needed)
@@ -10,7 +17,10 @@ function CalenderBlock (){
 
     return(
         <>
-        <Card><br/>Calender will be here</Card>
+        <Card>
+            Calender will be here.
+            {/* <Calend  /> */}
+        </Card>
         </>
     );
 

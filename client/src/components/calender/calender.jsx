@@ -1,6 +1,11 @@
+import Calend from 'calend';
+import 'calend/styles/index.css'; // import styles
+
+
+
 function Calender (){
     return(
-        <div>Calendar stuff goes here</div>
+        <Calend />
     );
 }
 
