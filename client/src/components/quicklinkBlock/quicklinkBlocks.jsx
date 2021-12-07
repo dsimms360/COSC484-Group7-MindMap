@@ -59,7 +59,14 @@ export const ButtonBlock = styled.div`
   right: 2.0%;
   top: 8.00%;
   bottom: 6.22%;
-
+  .btn{
+    font-size: 12px;
+    padding: 5px 20px;
+    border-radius: 5px;
+    margin: 0px 0px;  
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif; 
+    }
   // for placement test
   // background: purple;
 `;
