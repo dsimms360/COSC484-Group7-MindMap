@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 const response = require('../lib/responseLib');
-const EventModel = mongoose.model('Event');
+const NoteModel = mongoose.model('Note');
 
-// add event
-let createEvent = (req, res) => {
-    let newEvent = new EventModel({
+// add note
+let createNote = (req, res) => {
+    let newNote = new NoteModel({
         googleId: req.body.googleId,
         title: req.body.title, 
         startTime: req.body.startTime,
@@ -12,7 +12,7 @@ let createEvent = (req, res) => {
         location: req.body.location
     })
 
-    newEvent.save((err, result) => {
+    newNote.save((err, result) => {
         if (err) {
             let apiResponse = response.generate(true, 'Error', 500, err)
             res.send(apiResponse)
@@ -24,5 +24,5 @@ let createEvent = (req, res) => {
 }
 
 module.exports = {
-    createEvent: createEvent
+    createNote: createNote
 }

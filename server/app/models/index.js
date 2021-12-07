@@ -5,12 +5,10 @@ const db = {};
 
 db.mongoose = mongoose;
 
-
 db.user = require("./user.model");
 db.user = require("./quicklink.model");
 db.user = require("./todo.model");
 db.user = require("./event.model");
-
-
+db.user = require("./note.model");
 
 module.exports = db;

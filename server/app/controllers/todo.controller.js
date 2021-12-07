@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const response = require('../lib/responseLib');
 const TodoModel = mongoose.model('Todo');
 
-// add quicklink
+// add todo
 let createTodo = (req, res) => {
     let newTodo = new TodoModel({
         googleId: req.body.googleId,
