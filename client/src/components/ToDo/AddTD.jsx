@@ -26,7 +26,7 @@ const AddLink = ({onAdd}) => {
                 <label>Task</label>
                 <input 
                     type = 'text' 
-                    placeholder = 'Add Link Title' 
+                    placeholder = 'Add Task' 
                     value={task} 
                     onChange={(e) => setTitle(e.target.value)} 
                 />
