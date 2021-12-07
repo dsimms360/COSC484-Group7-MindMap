@@ -1,18 +1,19 @@
-const UserController = require('../controllers/user.controller')
-// const authJwt = require('../middlewares/authJwt');
+const UserController = require('../controllers/user.controller');
+const QuicklinkController = require('../controllers/quicklink.controller');
 
 let setRouter = (app) => {
-    let baseUrl = '/user';
+    let baseUserUrl = '/user';
     
-    app.post(baseUrl + '/create', UserController.createUser);
+    app.post(baseUserUrl + '/create', UserController.createUser);
+    app.get(baseUserUrl + '/getAll', UserController.getUser);
+    app.get(baseUserUrl + '/view/:id', UserController.viewByUserId);
+    app.put(baseUserUrl + '/edit/:id', UserController.editUser);
+    app.post(baseUserUrl + '/delete/:id', UserController.deleteUser);
 
-    app.get(baseUrl + '/getAll', UserController.getUser);
+    let baseQuicklinkUrl = '/quicklink';
+    app.post(baseQuicklinkUrl + '/create', QuicklinkController.createQuicklink);
 
-    app.get(baseUrl + '/view/:id', UserController.viewByUserId);
 
-    app.put(baseUrl + '/edit/:id', UserController.editUser);
-
-    app.post(baseUrl + '/delete/:id', UserController.deleteUser);
 }
 
 module.exports = {
